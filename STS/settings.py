@@ -92,7 +92,7 @@ DATABASES = {
         'NAME': 'STS',
         'USER': 'dbUser ',
         'PASSWORD': '12345',
-        'HOST': 'mongodb+srv://dbUser:12345@sts.sgpsn.azure.mongodb.net/dbUser?retryWrites=true&w=majority',
+        'HOST': 'mongodb+srv://dbUser:12345@sts.sgpsn.azure.mongodb.net/STS?retryWrites=true&w=majority',
         'SSL' : 'true',
         'TEST': {
             'NAME': 'mytestdatabase',
