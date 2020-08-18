@@ -91,20 +91,19 @@ DATABASES = {
        'ENGINE': 'djongo',
         'NAME': 'STS',
         'USER': 'dbUser ',
-        'PASSWORD': '12345',
-        'HOST': 'mongodb+srv://dbUser:12345@sts.sgpsn.azure.mongodb.net/STS?retryWrites=true&w=majority',
+        'PASSWORD': 'admin123',
+        'HOST': 'mongodb+srv://dbUser:admin123@sts.sgpsn.azure.mongodb.net/STS?retryWrites=true&w=majority',
         'SSL' : 'true',
         'TEST': {
             'NAME': 'mytestdatabase',
             'USER': 'dbUser ',
-            'PASSWORD': '12345',
-            'HOST': 'mongodb+srv://dbUser:12345@sts.sgpsn.azure.mongodb.net/mytestdatabase?retryWrites=true&w=majority',
+            'PASSWORD': 'admin123',
+            'HOST': 'mongodb+srv://dbUser:admin123@sts.sgpsn.azure.mongodb.net/mytestdatabase?retryWrites=true&w=majority',
             'SSL' : 'true', 
         },
     }
 }
     
-
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
