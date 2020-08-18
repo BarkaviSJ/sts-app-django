@@ -90,17 +90,12 @@ DATABASES = {
     'default': {
        'ENGINE': 'djongo',
         'NAME': 'STS',
-        'USER': 'dbUser ',
+        'USERNAME': 'dbUser ',
         'PASSWORD': 'admin123',
         'HOST': 'mongodb+srv://dbUser:admin123@sts.sgpsn.azure.mongodb.net/STS?retryWrites=true&w=majority',
+        'PORT' : 27017,
         'SSL' : 'true',
-        'TEST': {
-            'NAME': 'mytestdatabase',
-            'USER': 'dbUser ',
-            'PASSWORD': 'admin123',
-            'HOST': 'mongodb+srv://dbUser:admin123@sts.sgpsn.azure.mongodb.net/mytestdatabase?retryWrites=true&w=majority',
-            'SSL' : 'true', 
-        },
+        
     }
 }
     
