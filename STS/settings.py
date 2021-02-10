@@ -86,45 +86,16 @@ WSGI_APPLICATION = 'STS.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 # Add database in here
 
-#retrieving environment variables from azure
-
-STS_DB_NAME = os.environ.get('STS_DB_NAME', None)
-STS_DB_USER = os.environ.get('STS_DB_USER', None)
-STS_DB_PASSWORD = os.environ.get('STS_DB_PASSWORD', None)
-STS_DB_HOST = os.environ.get('STS_DB_HOST', None)
-STS_TEST_DB_NAME = os.environ.get('STS_TEST_DB_NAME', None)
-STS_TEST_DB_USER = os.environ.get('STS_TEST_DB_USER', None)
-STS_TEST_DB_PASSWORD = os.environ.get('STS_TEST_DB_PASSWORD', None)
-STS_TEST_DB_HOST = os.environ.get('STS_TEST_DB_HOST', None)
-
-print(
-    f'--------------------------------------\n'
-    f'STS_DB_NAME={STS_DB_NAME}\n'
-    f'STS_DB_USER={STS_DB_USER}\n'
-    f'STS_DB_PASSWORD={STS_DB_PASSWORD}\n'
-    f'STS_DB_HOST={STS_DB_HOST}\n'
-    f'STS_TEST_DB_NAME={STS_TEST_DB_NAME}\n'
-    f'STS_TEST_DB_USER={STS_TEST_DB_USER}\n'
-    f'STS_TEST_DB_PASSWORD={STS_TEST_DB_PASSWORD}\n'
-    f'STS_TEST_DB_HOST={STS_TEST_DB_HOST}\n'
-    f'---------------------------------------'
-)
-
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': STS_DB_NAME,
-        'USER': STS_DB_USER,
-        'PASSWORD': STS_DB_PASSWORD,
-        'HOST': STS_DB_HOST,
+       'ENGINE': 'djongo',
+        'NAME': 'STS',
+        'USERNAME': 'dbUser ',
+        'PASSWORD': 'admin123',
+        'HOST': 'mongodb+srv://dbUser:admin123@sts.sgpsn.azure.mongodb.net/STS?retryWrites=true&w=majority',
+        'PORT' : 27017,
         'SSL' : 'true',
-        'TEST': {
-            'NAME': STS_TEST_DB_NAME,
-            'USER': STS_TEST_DB_USER,
-            'PASSWORD': STS_TEST_DB_PASSWORD,
-            'HOST': STS_TEST_DB_HOST,
-            'SSL' : 'true',
-        },
+        
     }
 }
     
